@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/6d219866b6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Flavo</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar__hamburger">
+        <div class="navbar__bars-container">
+          <span class="navbar__bar"></span>
+          <span class="navbar__bar"></span>
+          <span class="navbar__bar"></span>
+        </div>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__link">Home</li>
+        <li class="navbar__link">Products</li>
+        <li class="navbar__link">Offers</li>
+        <li class="navbar__link">Contact</li>
+      </ul>
+    </nav>
+    <h1 class="logo">flavo</h1>
+    <div class="shoppingBag">
+      <img src="./assets/images/shopping-bag.png" alt="shopping bag" />
+    </div>
+  </header>
+  <main>
+    <section class="product">
+      <div class="product__images">
+        <i class="fa-solid fa-angle-left cursorOff"></i>
+        <img src="./assets/images/intensity.png" alt="intensity" class="images__img" />
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+  
+      <div class="product__price">
+        <h2 class="product__title">Intensity</h2>
+        <p class="product__price-value">$15</p>
+      </div>
+  
+      <div class="product__description">
+        <h3>WHAT'S INSIDE</h3>
+        <p class="product__description-content">Chili, oregano, safran, paprika</p>
+      </div>
+  
+      <div class="product__description">
+        <h3>WHY WE LOVE IT</h3>
+        <p>This one will add a little savoury flavour to any food and turn any meal to a culinary masterpiece.</p>
+      </div>
+  
+      <div class="product__weight">
+        <div>
+          <input type="radio" name="choice" id="bag" checked />
+          <label for="bag">BAG (75g)</label>
+        </div>
+        <div>
+          <input type="radio" name="choice" id="jar" />
+          <label for="jar">JAR (150g)</label>
+        </div>
+      </div>
+  
+      <div class="product__item-quantity">
+        <button>-</button>
+        <p class="itemQuaityToAdd">1</p>
+        <button>+</button>
+      </div>
+  
+      <button class="product__add-btn">ADD TO CART</button>
+    </section>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

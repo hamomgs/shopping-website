@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+@font-face {
+  font-family: 'BoringSansABoldDemo';
+  src: url('../fonts/BoringSansABoldDemo.woff');
+}
+
+@font-face {
+  font-family: 'AppleGaramond';
+  src: url('../fonts/AppleGaramond-Italic.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+  background-color: #FEBD45;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  width: 95%;
+  height: 50px;
+  margin: 20px auto 0 auto;
+  padding: 0 10px 0 20px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+h1 {
+  font-family: 'AppleGaramond', sans-serif;
+  font-size: 28px;
+  cursor: default;
+}
+
+h2, h3 {
+  font-family: 'BoringSansABoldDemo', 'Source Sans Pro', sans-serif;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar__menu {
+  position: absolute;
+  left: -15%;
+  top: -45px;
+  transform: scale(0);
+  display: inherit;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  height: 200px;
+  padding-top: 20px;
+  transition: 0.3s;
+  background-color: #fff;
+}
+
+.navbar__menu::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid #fff;
+}
+
+.navbar__link {
+  display: inherit;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+}
+
+.navbar__menu.active {
+  top: 90px;
+  left: 15px;
+  transform: scale(1);
+}
+
+.navbar__bars-container {
+  cursor: pointer;
+}
+
+.navbar__bar {
+  display: block;
+  width: 25px;
+  margin: 5px 0;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  height: 2px;
+  background-color: #000;
+}
+
+.navbar__hamburger.active .navbar__bar:nth-child(2) {
+  opacity: 0;
+}
+.navbar__hamburger.active .navbar__bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.navbar__hamburger.active .navbar__bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.shoppingBag img {
+  width: 35px;
+  cursor: pointer;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  padding: 0 10px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.product, .product > div {
+  width: 100%;
+}
+
+.product__images {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 250px;
+}
+
+.product__images i {
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.product__images i:nth-child(1) {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+i.cursorOff {
+  cursor: default;
+}
+
+.product__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product__price h2 {
+  font-size: 28px;
+}
+
+.product__price p {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+.product__description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product__weight {
+  display: flex;
+  gap: 60px;
+}
+
+.product__weight input {
+  display: none;
+}
+
+.product__weight input + label::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 20px 5px -3.5px 0;
+  border-radius: 50%;
+  border: solid 1px #000;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background-color: #FEBD45;
+}
+
+.product__weight input:checked + label::before {
+  background-color: #000;
+}
+
+.product__item-quantity {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border: solid 1px #000;
+  border-radius: 50px;
+}
+
+.product__item-quantity button {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.product__item-quantity p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.product__add-btn {
+  width: 100%;
+  height: 50px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #fcfaae;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #000;
+}
